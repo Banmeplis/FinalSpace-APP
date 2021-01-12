@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      CITAS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  
+  <ion-card *ngFor="let cita of citas">
+    <img  [src]="cita.image">
+    <ion-card-header>    
+      <h3>{{ cita.by }}</h3>    
+    </ion-card-header>
+  
+    <ion-card-content>
+   <p><b>Frase: </b>{{ cita.quote }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
